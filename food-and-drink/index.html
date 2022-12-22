@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="./index.css"/>
+
+    <script src="/script.js"></script>
+    <script src="./index.js"></script>
+    
+    <script>
+        window.onload = insertMenu9()
+    </script>
+
+    <title>Food & Drink</title>
+</head>
+<body>
+    
+    <div id="nav-container"></div>
+
+    <div id="countries-container"></div>
+
+    <div id="db-pubs-container"></div>
+
+    <button onclick="sendmail()">Send mail</button>
+    
+    <button onclick="addPubData()">Add pub data to DB</button>
+
+    <button onclick="getPubData()">get pub data from DB</button>
+
+
+    <h1>Food & Drink</h1>
+
+
+    <!-- <table>
+        <tr>
+            <td>Bodega</td><td>Cornmarket St</td>
+        </tr>
+        <tr>
+            <td>Canty's</td><td>Phoenix St</td>
+        </tr>
+ 
+    </table> -->
+
+
+    <h2>Some places to eat</h2>
+
+    <ul id="places-to-eat" class="accordion">
+        <li class="accordion-header" data-list="0">Macdonalds</li>
+            <div class="accordion-panel">
+                <table>
+                    <tr>
+                        <td colspan="2"><img src="./images/macdonalds.jpg" alt="Big Burger"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td><td>021 9696969696</td>
+                    </tr>
+                    <tr>
+                        <td>email</td><td>orders@macdonalds.ie</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td><td>Winthrop St, Cork</td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+
+        <li class="accordion-header" data-list="1">Bodega</li>
+            <div class="accordion-panel">
+                <table>
+                    <tr>
+                        <td colspan="2"><img src="./images/bodega.jpg" alt="Bodega"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td><td>021 9696969696</td>
+                    </tr>
+                    <tr>
+                        <td>email</td><td>orders@bodega.ie</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td><td>Cornmarket St, Cork</td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+
+        <li class="accordion-header" data-list="2">Rossini's</li>
+            <div class="accordion-panel">
+                <table>
+                    <tr>
+                        <td colspan="2"><img src="./images/rossinis.jpg" alt="Bodega"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td><td>021 9696969696</td>
+                    </tr>
+                    <tr>
+                        <td>email</td><td>orders@rossinis.ie</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td><td>Princes St, Cork</td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+
+    </ul>
+
+
+    <h2>Some places to drink</h2>
+
+    <div id="pubs-container"></div>
+
+
+
+
+
+
+</body>
+</html>

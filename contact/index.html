@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="/style.css"/>
+    <script src="/script.js"></script>
+    <script>
+        window.onload = insertMenu()
+    </script>
+
+    <style>
+        form {
+            border: 1px solid darkgray;
+            border-radius: 4px;
+            padding:10px
+        }
+        label {
+            display: inline-block;
+            width: 15%;
+            border: 1px solid darkgray;
+            border-radius: 4px;
+            background-color: lightgray;
+            vertical-align: top;
+            margin-right: 4px;
+        }
+        select {
+            margin:-4px;
+        }
+        select, option, input {
+            display: inline-block;
+        }
+
+    </style>
+
+    <title>Contact Us</title>
+</head>
+<body>
+    
+    <div id="nav-container"></div>
+
+
+    <h1>Contact Us</h1>
+
+    <div>Enter your enquiry below</div>
+
+    <form name="myForm" id="myFormId" onsubmit="return formHandler3()" action="mailto:eamole@hotmail.com" method="post">
+        <!-- <form name="myForm" id="myFormId" onsubmit="return formHandler3()" action="http://localhost:5000/sendmail" method="post"> -->
+
+        <label >Name </label><input name="name" type="text" ><br>
+        <label >Email </label><input name="email" type="email" ><br>
+        <label>Category </label>
+            <select name="category" id="">
+                <option value="info-request">Information Request</option>
+                <option value="website-change">Website Changes</option>
+                <option value="event-news">Event or News</option>
+                <option value="other">Other</option>
+            </select>
+         <br>
+
+         <label>Reply</label>
+            <label>Email</label> <input name="respond" type="radio" value="email">
+            <label>SMS</label> <input name="respond" type="radio" value="sms">
+            <label>Phone</label> <input name="respond" type="radio" value="phone">
+            <br>
+
+        <label >Subject </label><input name="subject" type="text" ><br>
+
+        <label >Message </label><textarea name="message" cols="30" rows="10"></textarea><br>
+
+        <input type="submit" value="Send" >
+
+
+
+    </form>
+
+    <script>
+
+        function dummyGetFormData(form) {
+            let data = {}
+            data["name"] = form["name"].value
+            data["email"] = form["email"].value
+            //.......
+            return data
+        }
+
+        function getFormData(form, names) {
+            let data = {} // 
+            for (let name of names) {
+                let input = form[name]
+                data[name] = input.value
+            }
+            return data
+        }
+
+        function formHandler3() {
+            let myForm = document.getElementById("myFormId")
+
+            let data = getFormData(myForm, ["name", "email", "category", "respond", "subject"])
+            console.log(data)
+            return false
+        }
+
+
+
+        function getField(form, fieldName) {
+            let input = form[fieldName]
+            let value = input.value
+            return value
+        }
+
+        function formHandler2() {
+            let myForm = document.getElementById("myFormId")
+
+            let name = getField(myForm, "name")
+            let email = getField(myForm, "email")
+
+            console.log('name', name)
+            console.log('email', email)
+
+            return false
+
+        }
+
+        function formHandler() {
+            let myForm = document.getElementById("myFormId")
+
+            let input = myForm["name"]
+            let name = input.value
+            input = myForm["email"]
+            let email = input.value
+            input = myForm["category"]
+            let category = input.value
+            input = myForm["respond"]
+            let respond = input.value
+            input = myForm["subject"]
+            let subject = input.value
+            input = myForm["message"]
+            let message = input.value
+
+            console.log('name', name)
+            console.log('email', email)
+            console.log('category', category)
+            console.log('respond', respond)
+            // always cancel the submit - for now anyway
+            return false;
+        } 
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

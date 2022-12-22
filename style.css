@@ -1,0 +1,94 @@
+
+h1 {
+    color:green;
+    font-size:20pt;
+    transition: font-size 2s;
+}
+
+label {
+    display: block;
+}
+
+/*
+h1:hover {
+    font-size: 25pt;
+}
+*/
+
+/* this is a class definition */
+.greentext {
+    color:greenyellow;
+}
+
+.bluetext {
+    color:blue;
+    display:inline;
+}
+
+/* this is an ID - must be unique on the page */
+#special {
+    color:green;
+}
+#navbar {
+    color:darkblue;
+    background-color:lightgray;
+    width: 90%;
+}
+/* menu buttons */
+#navbar > a {
+    display: inline-block ;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    margin: 2px;
+    transition: width 2s;
+
+}
+
+#navbar > a:hover {
+
+}
+
+
+
+
+
+
+
+ol {
+    list-style-type: upper-roman;
+}
+
+ul {
+    list-style-type: square;
+}
+
+table, tr, td {
+    border: 1px solid darkgray;
+    border-collapse: collapse;
+}
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

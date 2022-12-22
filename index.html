@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- internal style sheet better than inline styling, but still not good -->
+    <style>
+
+    </style>
+    <!-- finally, the proper way - an external, shared style sheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <script src="/script.js"></script>
+    <script>
+        window.onload = insertMenu()
+    </script>    
+
+    <title>Cork Tourism</title>
+</head>
+<body>
+    <div id="nav-container"></div>
+
+    <!-- semantic markup -->
+    <h1>This is a page about Cork</h1>
+    <h2>This is the home page</h2>
+    <p id="special">Cork is a beauty spot</p>
+
+    <!-- inline styling - don't do it!!!!      -->
+    <div style="color:red;width:50%">This is some text</div>
+
+
+
+    <img src="./images/cork.jpg" width="25%" alt="The river Lee in Cork">
+    <div class="greentext">This is green <span class="bluetext">(this is an inner node in blue)</span> yellow text</div>
+    <div class="bluetext">This is some text</div>
+
+    <button onclick="clicker()">Click Me</button>
+    <div id="sometext" class="redtext">This is some more text</div>
+
+</body>
+</html>
+<script>
+    let size = 20
+    function clicker() {
+        let el = document.getElementById('sometext')
+        size = size + 1
+        el.style.fontSize = size + "px";
+        console.log(el.style.fontSize)
+    }
+    
+</script>
+
+
+
+
+
+
+
+
+
+

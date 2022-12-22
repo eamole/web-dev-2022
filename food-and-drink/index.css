@@ -1,0 +1,57 @@
+.accordion-panel {
+    display: none;
+    /* transition: display 2s; does not work in CSS3 */
+    /* was trying to get the panel to reveal itself via a transition */
+    /* doesn't work either :-( */
+    /* width: 0px; */
+    /* transition: width 2s;  */
+}
+
+.accordion-panel table {
+    width: 80%
+}
+
+.accordion-panel img {
+    width: 100%;
+
+}
+
+.accordion-header {
+    cursor:pointer;
+    display:block;
+    width:50%;
+    background-color: lightgray;
+    border-color:darkgray;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 5px;
+    transition: width 2s;
+}
+
+.accordion-header:hover {
+    font-style:italic;
+    width:80%
+}
+
+
+.visible {
+    display: block;
+    /* width: 80%; doesn't work for transition */
+}
+.invisible {
+    display: none;
+    /* width: 0px; doesn't work for transition */
+}
+
+/* h1 {
+    background-image: url('/images/food.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 1024px 964px;
+
+    height:120px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top:50px;
+} */
