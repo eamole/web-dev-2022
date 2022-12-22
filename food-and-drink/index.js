@@ -19,6 +19,7 @@ let displayPubData = (pubs) => {
     html += "<thead>"
         html += "<th>Name</th>"
         html += "<th>Address</th>"
+        
         html += "<th>Email</th>"
         html += "<th>Phone</th>"
         html += "<th>Picture</th>"
