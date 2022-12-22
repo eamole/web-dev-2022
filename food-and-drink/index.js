@@ -20,7 +20,6 @@ let displayPubData = (pubs) => {
         html += "<th>Name</th>"
         html += "<th>Address</th>"
         html += "<th>Email</th>"
-    
         html += "<th>Phone</th>"
         html += "<th>Picture</th>"
     html += "</thead>"
@@ -46,7 +45,7 @@ let getPubData = () => {
     fetch("http://localhost:5000/get-pub-data")
     .then( response => response.text() )
     .then( data => {
-        console.log('data', data) // as a json string
+        // console.log('data', data) // as a json string
         pubs = JSON.parse(data) // this will now be JS data
 
         displayPubData(pubs)
@@ -97,9 +96,9 @@ let getData = () => {
     fetch('http://localhost:5000/countries') // returns a Promise
     .then( response => response.text() )
     .then( json => {
-        console.log('json', json)   // json is a string
+        // console.log('json', json)   // json is a string
         let data = JSON.parse(json)
-        console.log('data', data)
+        // console.log('data', data)
         insertTheData(data)
 
 
@@ -170,15 +169,15 @@ function generatePubPanel(pub) {
 
 // add click handlers to each accordion header
 function hookHeaders() {
-    console.log('dom content loaded')
+    // console.log('dom content loaded')
 
     let panels = document.getElementsByClassName("accordion-panel")
 
     let headers = document.getElementsByClassName("accordion-header")
-    console.log('headers', headers)
+    // console.log('headers', headers)
     
     for (let header of headers) {
-        console.log('header', header)
+        // console.log('header', header)
         header.onclick = togglePanel2
     }
 
@@ -196,7 +195,7 @@ function hookHeaders() {
         let list = this.dataset.list
         
         let panel = panels[list]
-        console.log('display', panel.style.display)
+        // console.log('display', panel.style.display)
         if (panel.style.display == "none" || panel.style.display == "") { // if its invisible
             panel.style.display = "block" // make it visible
         } else {
